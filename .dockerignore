@@ -1,0 +1,26 @@
+# استبعاد البيئة الافتراضية
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# قاعدة البيانات المحلية
+*.db
+
+# ملفات إعدادات Docker وKubernetes التي لا تحتاجها داخل الصورة
+docker-compose.yml
+db-deployment.yaml
+web-deployment.yaml
+web-service.yaml
+
+
+
+# ملفات النظام
+*.log
+.DS_Store
+*.swp
+*.swo
+
+# ملفات VSCode
+.vscode/

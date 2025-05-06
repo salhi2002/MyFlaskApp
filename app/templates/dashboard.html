@@ -1,0 +1,33 @@
+<!-- templates/dashboard.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>البيانات</h2>
+        <form action="/add" method="POST">
+            <input type="text" name="content" placeholder="أدخل بيانا جديدا" required>
+            <button type="submit">إضافة</button>
+        </form>
+
+        <table>
+            <tr><th>المعرف</th><th>البيان</th></tr>
+            {% for row in rows %}
+            <tr>
+                <td>{{ row[0] }}</td>
+                <td>{{ row[1] }}</td>
+                <td>
+                    <form action="/delete/{{ row[0] }}" method="POST" style="display:inline;">
+                        <button class="delete-btn" type="submit" onclick="return confirm('هل أنت متأكد من الحذف؟');">حذف</button>
+                    </form>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

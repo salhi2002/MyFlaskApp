@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.env
+*.sqlite3
+*.db
+
+# VSCode
+.vscode/
+
+# Byte-compiled / cache / logs
+*.log
+*.pot
+*.pyc
+
+# Virtual environments
+venv/
+ENV/
+env/
+.venv/
+
+# Flask instance folder
+instance/
+
+# Docker
+*.docker
+*.tar
+*.img
+*.container
+
+# Pytest
+.cache/
+.pytest_cache/
+
+# Mac OS
+.DS_Store
+
+# Node (if you use it in static)
+node_modules/
+
+# IDEs
+.idea/
+*.swp
